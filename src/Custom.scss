@@ -1,0 +1,19 @@
+$primary: rgb(13, 58, 126);
+$off-white: #f8f9fa;
+$soft-gray: #adb5bd;
+
+$form-select-indicator-color: $off-white;
+$body-bg: #212529;
+$card-border-color: rgba($off-white, 0.125);
+
+$card-bg: $body-bg;
+$body-color: $off-white;
+
+$input-focus-border-color: lighten($primary, 10%);
+$form-check-input-border: 1px solid rgba(white, 0.25);
+$modal-content-bg: $body-bg;
+$btn-close-color: $off-white;
+$accordion-button-active-bg: darken($primary, 10%);
+$accordion-button-active-color: $body-color;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
