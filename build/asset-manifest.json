@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd4573b0.chunk.css",
-    "main.js": "/static/js/main.b7143940.chunk.js",
-    "main.js.map": "/static/js/main.b7143940.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5195bbb3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5195bbb3.js.map",
-    "static/js/2.8a833f5d.chunk.js": "/static/js/2.8a833f5d.chunk.js",
-    "static/js/2.8a833f5d.chunk.js.map": "/static/js/2.8a833f5d.chunk.js.map",
-    "static/js/3.9551bcb2.chunk.js": "/static/js/3.9551bcb2.chunk.js",
-    "static/js/3.9551bcb2.chunk.js.map": "/static/js/3.9551bcb2.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.dd4573b0.chunk.css.map": "/static/css/main.dd4573b0.chunk.css.map",
-    "static/js/2.8a833f5d.chunk.js.LICENSE.txt": "/static/js/2.8a833f5d.chunk.js.LICENSE.txt"
+    "main.css": "/YuGiOh-Card-Manager/static/css/main.08c2592e.chunk.css",
+    "main.js": "/YuGiOh-Card-Manager/static/js/main.e4771b70.chunk.js",
+    "main.js.map": "/YuGiOh-Card-Manager/static/js/main.e4771b70.chunk.js.map",
+    "runtime-main.js": "/YuGiOh-Card-Manager/static/js/runtime-main.1f04acbe.js",
+    "runtime-main.js.map": "/YuGiOh-Card-Manager/static/js/runtime-main.1f04acbe.js.map",
+    "static/js/2.444c11da.chunk.js": "/YuGiOh-Card-Manager/static/js/2.444c11da.chunk.js",
+    "static/js/2.444c11da.chunk.js.map": "/YuGiOh-Card-Manager/static/js/2.444c11da.chunk.js.map",
+    "static/js/3.de8e5c74.chunk.js": "/YuGiOh-Card-Manager/static/js/3.de8e5c74.chunk.js",
+    "static/js/3.de8e5c74.chunk.js.map": "/YuGiOh-Card-Manager/static/js/3.de8e5c74.chunk.js.map",
+    "index.html": "/YuGiOh-Card-Manager/index.html",
+    "static/css/main.08c2592e.chunk.css.map": "/YuGiOh-Card-Manager/static/css/main.08c2592e.chunk.css.map",
+    "static/js/2.444c11da.chunk.js.LICENSE.txt": "/YuGiOh-Card-Manager/static/js/2.444c11da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5195bbb3.js",
-    "static/js/2.8a833f5d.chunk.js",
-    "static/css/main.dd4573b0.chunk.css",
-    "static/js/main.b7143940.chunk.js"
+    "static/js/runtime-main.1f04acbe.js",
+    "static/js/2.444c11da.chunk.js",
+    "static/css/main.08c2592e.chunk.css",
+    "static/js/main.e4771b70.chunk.js"
   ]
 }
