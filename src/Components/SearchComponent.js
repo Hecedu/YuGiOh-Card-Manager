@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function SearchComponent(props) {
     const { name, onFilterChange } = props;
     return (

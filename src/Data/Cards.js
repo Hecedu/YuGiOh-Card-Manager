@@ -1,0 +1,8 @@
+export const cards = [
+    { id: 2, name: 'Blue-Eyes White Dragon', description: 'This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.', imageUrl: 'https://storage.googleapis.com/ygoprodeck.com/pics/89631139.jpg'},
+    { id: 3, name: 'Dark Magician', description: 'The ultimate wizard in terms of attack and defense.', imageUrl: 'https://storage.googleapis.com/ygoprodeck.com/pics/46986414.jpg'},
+    { id: 4, name: 'Blue-Eyes White Dragon', description: 'This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.', imageUrl: 'https://storage.googleapis.com/ygoprodeck.com/pics/89631139.jpg'},
+    { id: 5, name: 'Dark Magician', description: 'The ultimate wizard in terms of attack and defense.', imageUrl: 'https://storage.googleapis.com/ygoprodeck.com/pics/46986414.jpg'},
+    { id: 6, name: 'Blue-Eyes White Dragon', description: 'This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.', imageUrl: 'https://storage.googleapis.com/ygoprodeck.com/pics/89631139.jpg'},
+    { id: 7, name: 'Dark Magician', description: 'The ultimate wizard in terms of attack and defense.', imageUrl: 'https://storage.googleapis.com/ygoprodeck.com/pics/46986414.jpg'}
+];

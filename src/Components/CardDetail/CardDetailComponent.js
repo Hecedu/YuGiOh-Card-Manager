@@ -1,22 +1,21 @@
 import React from 'react'
-import Popup from "reactjs-popup";
-import {Modal, Button} from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 
-export default function GameDetailComponent({ game, show, onHide, onDelete}) {
+export default function CardDetailComponent({ card, show, onHide, onDelete }) {
     const removeHandler = () => {
-        onDelete(game)
+        onDelete(card)
     }
     return (
-        <div class="d-flex justify-content-center">
+        <div class="container-fluid text-center">
             <Modal show={show} onHide={onHide}>
                 <Modal.Header>
-                    <Modal.Title>{game.name}</Modal.Title>
+                    <Modal.Title>{card.name}</Modal.Title>
                     <Button variant="primary" onClick={onHide}>close</Button>
                 </Modal.Header>
-                <Modal.Body>
-                    <p>Description: {game.description}</p>
-                    <p>year: {game.year}</p>
-                    <p>console: {game.console}</p>
+                <Modal.Body class="container-fluid text-center">
+                    <img src={card.imageUrl} class="img-large my-3" alt="Responsive image"></img>
+                    <p></p>
+                    <p>Description: {card.description}</p>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="danger" onClick={removeHandler}>
@@ -24,7 +23,6 @@ export default function GameDetailComponent({ game, show, onHide, onDelete}) {
                     </Button>
                 </Modal.Footer>
             </Modal>
-
         </div>
 
     )

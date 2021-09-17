@@ -1,55 +1,74 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
+
 import './Custom.scss';
-import { games } from './Data/Games'
+import { cards } from './Data/Cards'
 import SearchComponent from './Components/SearchComponent.js'
-import GameListComponent from './Components/GameList/GameListComponent'
-import AddGameComponent from './Components/AddGame/AddGameComponent'
-import GameDetailComponent from './Components/GameDetail/GameDetailComponent'
+import CardGridComponent from './Components/CardGrid/CardGridComponent'
+import AddCardComponent from './Components/AddCard/AddCardComponent'
+import CardDetailComponent from './Components/CardDetail/CardDetailComponent'
 
 
 function App() {
-
-  const [filteredGames, setFilteredGames] = useState(games)
-  const [allGames, setAllGames] = useState(games)
-  const [SelectedGame, setSelectedGame] = useState(games[0])
+  const [filteredCards, setFilteredCards] = useState(cards)
+  const [allCards, setAllCards] = useState(cards)
+  const [selectedCard, setSelectedCards] = useState(cards[0])
+  const [selectedTheme, setSelectedTheme] = useState('dark')
 
   //modal
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [showDetailsModal, setShowDetailsModal] = useState(false);
+  const handleDetailsClose = () => setShowDetailsModal(false);
+  const handleDetailsShow = () => setShowDetailsModal(true);
+
+  const [showAddCardModal, setAddCardModal] = useState(false);
+  const handleAddCardClose = () => setAddCardModal(false);
+  const handleAddCardShow = () => setAddCardModal(true);
 
   const onFilterChange = (event) => {
-    const filteredGames = allGames.filter(game => game.name.toLowerCase().includes(event.target.value.toLowerCase()));
-    setFilteredGames(filteredGames);
+    const filteredCards = allCards.filter(card => card.name.toLowerCase().includes(event.target.value.toLowerCase()));
+    setFilteredCards(filteredCards);
   }
-  const removeGame = (game) => {
-    console.log(game.id)
-    const newGameList = allGames.filter(g => g.id != game.id)
-    setAllGames(newGameList)
-    setFilteredGames(newGameList)
-    setSelectedGame('')
-    handleClose()
-    console.log(newGameList)
+  const removeCard = (card) => {
+    const newCardList = allCards.filter(c => c.id != card.id)
+    setAllCards(newCardList)
+    setFilteredCards(newCardList)
+    setSelectedCards('')
+    handleDetailsClose()
   }
-
-  function onGameClick(game) {
-    setSelectedGame(game)
-    handleShow()
-    console.log(game)
+  function onCardClick(card) {
+    setSelectedCards(card)
+    handleDetailsShow()
   }
-  function addGame(newGame) {
-    const newGameList = [...allGames, newGame]
-    setAllGames(newGameList)
-    setFilteredGames(newGameList);
+  function onAddCardClick() {
+    handleAddCardShow()
+  }
+  function addCard(newCard) {
+    const newCardList = [...allCards, newCard]
+    setAllCards(newCardList)
+    setFilteredCards(newCardList);
+  }
+  const onSelectThemeChange = (event) => {
+    setSelectedTheme(event.target.value)
   }
 
   return (
+
     <div className="App container my-4">
-      <h1 className="d-flex justify-content-center">Hector's Game DB</h1>
-      <SearchComponent onFilterChange={onFilterChange} />
-      <GameListComponent games={filteredGames} onGameClick={onGameClick} />
-      <AddGameComponent addGame={addGame} />
-      <GameDetailComponent game={SelectedGame} show={show} onHide={handleClose} onDelete={removeGame} />
+      <select class="form-select" aria-label="Theme selector" onChange={onSelectThemeChange}>
+        <option selected disabled>Default</option>
+        <option value={'light'}>Light</option>
+        <option value={'dark'}>Dark</option>
+      </select>
+      <div className={selectedTheme}>
+        <h1 className="d-flex justify-content-center py-4">Card Collection</h1>
+        <SearchComponent onFilterChange={onFilterChange} />
+        <CardGridComponent cards={filteredCards} onCardClick={onCardClick} />
+        <AddCardComponent addCard={addCard} show={showAddCardModal} onHide={handleAddCardClose}/>
+        <CardDetailComponent card={selectedCard} show={showDetailsModal} onHide={handleDetailsClose} onDelete={removeCard} />
+        <Button class="btn btn-primary" onClick={onAddCardClick}>
+          Add Card
+        </Button>
+      </div>
     </div>
   );
 }
